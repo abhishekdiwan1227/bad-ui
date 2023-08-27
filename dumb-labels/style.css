@@ -1,0 +1,133 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Courier, monospace;
+    background-color: aquamarine;
+}
+
+.dumb-labels-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dl-logo {
+    position: relative;
+    width: 30rem;
+    height: 12rem;
+    font-size: 4rem;
+    background-color: aquamarine
+}
+
+.dl-logo .dl-logo-grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3, 33.3%);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.dl-logo .dl-logo-text {
+    padding: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+}
+
+.dl-logo .dl-logo-text .dl-logo-text-letter {
+    font-weight: bolder;
+    color: #157979;
+}
+
+.dl-input-form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.dl-input-field {
+    height: 3rem;
+    width: 20rem;
+    position: relative;
+    margin: 1.25rem;
+}
+
+.dl-input-field label {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0 .5rem;
+    border-radius: .25rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #157979;
+    left: 0;
+    height: 100%;
+    line-height: 3rem;
+    width: calc(100% - 1rem);
+}
+
+.dl-input-field label:hover {
+    cursor: pointer;
+}
+
+.dl-input-field input[type=text] {
+    position: absolute;
+    margin: 0;
+    border-radius: .25rem;
+    font-size: 1.25rem;
+    color: #157979;
+    outline: .25rem solid #157979;
+    height: 100%;
+    border: 0;
+    padding: 0 .5rem;
+    width: calc(100% - 1rem);
+    text-transform: lowercase;
+    outline: .15rem solid #157979;
+}
+
+.dl-input-field input[type=text]:focus {
+    border: 0;
+}
+
+.dl-input-field input[type=text]:focus~label {
+    position: absolute;
+    z-index: 10;
+    left: .25rem;
+    width: 5rem;
+    font-size: .75rem;
+    transform: translateY(-75%);
+    padding: 0 .5rem;
+    border: 0;
+    border-radius: .25rem;
+    line-height: 2rem;
+    height: 2rem;
+    animation: selection .5s both;
+    cursor: default;
+}
+
+
+@keyframes selection {
+    from {
+        width: calc(100% - 1rem);
+        left: 0;
+        transform: translateY(0);
+        height: 100%;
+    }
+
+    to {
+        width: 5rem;
+        height: 2rem;
+        left: .25rem;
+        transform: translateY(-75%);
+    }
+}
