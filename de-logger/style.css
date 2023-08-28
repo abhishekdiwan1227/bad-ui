@@ -1,0 +1,118 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(131deg, #1c0041 0%, rgb(92 9 121) 45%, #005c59 100%);
+    font-family: monospace;
+    color: white;
+}
+
+.dl-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.dl-logo {
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.dl-keyboard {
+    box-shadow: 0 0 .5rem .1rem #9210c4b4;
+    padding: 1rem;
+    border-radius: .3rem;
+    line-height: 2.5rem;
+    margin: 1rem;
+}
+
+.dl-keyboard:hover {
+    animation: glow 300ms both;
+}
+
+.dl-keyboard .dl-keyboard-rows {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.dl-keyboard .dl-keyboard-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: .5rem 0;
+}
+
+.dl-keyboard .dl-keyboard-row#dl-keyboard-row-1 {
+    padding-left: 5rem
+}
+
+.dl-keyboard .dl-keyboard-row#dl-keyboard-row-2 {
+    padding-left: 6rem
+}
+
+.dl-keyboard .dl-keyboard-row#dl-keyboard-row-3 {
+    padding-left: 7.5rem
+}
+
+.dl-keyboard .dl-key {
+    box-shadow: 0 0 .5rem .1rem #6720eeb4;
+    border-radius: .3rem;
+    color: white;
+    font-weight: bolder;
+    width: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.dl-keyboard .dl-key:hover {
+    animation: glow-key 100ms both;
+    color: #ffffff;
+    background-color: #ffffff1c;
+}
+
+.dl-keyboard .dl-keyboard-key {
+    width: 1rem;
+    border-radius: .3rem;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.dl-input {
+    background-color: #ffffff00;
+    width: 25rem;
+    line-height: 4rem;
+    color: white;
+    font-size: 2rem;
+    border: 0;
+    padding: 0 2rem;
+}
+
+.dl-input:focus {
+    outline: 0px solid #ffa60066;
+    animation: input-focus 200ms both;
+    border-radius: .3rem;
+}
+
+@keyframes glow {
+    to {
+        box-shadow: 0 0 .5rem .5rem #9210c4b4;
+    }
+}
+
+@keyframes glow-key {
+    to {
+        box-shadow: 0 0 .5rem .5rem #6720eeb4;
+        font-size: 2rem;
+    }
+}
+
+@keyframes input-focus {
+    to {
+        outline: .15rem solid #ffa600c4;
+    }
+
+}
