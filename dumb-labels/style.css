@@ -74,6 +74,8 @@ body {
     height: 100%;
     line-height: 3rem;
     width: calc(100% - 1rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .dl-input-field label:hover {

@@ -49,3 +49,19 @@ function getRandomColor() {
     }
     return color;
 }
+
+firstnameInput = document.querySelector("input#firstname")
+firstnameInput.addEventListener("focusout", event => {
+    if (event.srcElement.value && event.srcElement.value.trim() !== "") {
+        label = document.querySelector("label#firstname")
+        label.innerHTML = event.srcElement.value
+    }
+})
+
+lastnameInput = document.querySelector("input#lastname")
+lastnameInput.addEventListener("focusout", event => {
+    if(event.srcElement.value && event.srcElement.value.trim != "") {
+        label = document.querySelector("label#lastname")
+        label.innerHTML = event.srcElement.value
+    }
+})
